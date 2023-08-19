@@ -10956,6 +10956,12 @@ section.resume-section {
 section.resume-section .resume-section-content {
   width: 100%;
 }
+section.resume-section .icon-text {
+  display: block; /* Place text below the icon */
+  font-size: 12px; /* Adjust font size as needed */
+  color: #00aaff; /* Adjust color as needed */
+  text-align: center; /* Center-align the text */
+}
 
 @media (min-width: 768px) {
   section.resume-section {

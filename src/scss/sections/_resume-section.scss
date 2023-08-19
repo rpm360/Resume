@@ -14,6 +14,12 @@ section.resume-section {
     .resume-section-content {
         width: 100%;
     }
+    .icon-text {
+        display: block; /* Place text below the icon */
+        font-size: 12px; /* Adjust font size as needed */
+        color: #00aaff; /* Adjust color as needed */
+        text-align: center; /* Center-align the text */
+      }
 }
 
 @include media-breakpoint-up(md) {
