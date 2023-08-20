@@ -45,6 +45,8 @@ html(lang='en')
                     li.nav-item
                         a.nav-link.js-scroll-trigger(href='#interests') Interests
                     li.nav-item
+                        a.nav-link.js-scroll-trigger(href='#projects') Projects
+                    li.nav-item
                         a.nav-link.js-scroll-trigger(href='#awards') Awards
 
         // Page Content
@@ -57,12 +59,12 @@ html(lang='en')
                         | Rohit      
                         span.text-primary Marathe
                     .subheading.mb-5
-                        | 520 E chruch st orlando FL · (407) 666-7637· 
-                        a(href='mailto:name@email.com') rohitmarathe1995@gmail.com
+                        | 520 E chruch st Orlando FL · (407) 666-7637· 
+                        a(href='mailto:rohitmarathe1995@email.com') rohitmarathe1995@gmail.com
                     p.lead.mb-5
                         | Software Engineer | NLP | Conversation AI | IVR | Universal Bots | Generative AI | LLM
                     .social-icons
-                        a.social-icon(href='www.linkedin.com/in/rohit-marathe-ucf/')
+                        a.social-icon(href='https://linkedin.com/in/rohit-marathe-ucf/')
                             i.fab.fa-linkedin-in
                         a.social-icon(href='https://github.com/rpm360/')
                             i.fab.fa-github
@@ -275,49 +277,61 @@ html(lang='en')
 
             hr.m-0
 
-            // Awards
+            // Projects
+            section#projects.resume-section
+                .resume-section-content
+                    h2.mb-5 Projects
+                    ul.fa-ul.mb-0.d-flex.flex-wrap
+                        li.mb-4
+                            span.fa-li
+                                i.fas.fa-cogs.text-primary
+                            .project-info
+                                h4 KG Generator Tool V2
+                                p
+                                    |  KG Generator V2, brings advanced enhancements to our Knowledge Graph (KG) system. This version allows seamless integration of new Frequently Asked Questions (FAQs) while preserving the existing structure. Enjoy precise control, including editing, deletion, and comprehensive KG rebuilds. With scalability in mind, it manages millions of questions, diverse entities, and attributes. A user-friendly interface streamlines KG management, ensuring accuracy, reliability, and easy updates
+                        li.mb-4
+                            span.fa-li
+                                i.fas.fa-cogs.text-primary
+                            .project-info
+                                h4 Personal Tweet Classification NLP Deep Learning
+                                p
+                                    |  Implemented a deep learning model for classifying personal tweets using Natural Language Processing (NLP). The model achieved high accuracy and successfully differentiated personal tweets from non-personal ones.
+                        li.mb-4
+                            span.fa-li
+                                i.fas.fa-cogs.text-primary
+                            .project-info
+                                h4 Animated chatbot Avatar 
+                                p
+                                    |   chatbot avatar offers a seamless and intuitive way to interact, providing information and answering questions with flair. Watch as this avatar comes to life, adding a delightful dimension to your experience while delivering accurate and helpful responses. Say hello to the future of interactive communication with our animated chatbot avatar.
+
+            hr.m-0
+            
+            //Awards
             section#awards.resume-section
                 .resume-section-content
-                    h2.mb-5 Awards & Certifications
+                    h2.mb-5 Awards 
                     ul.fa-ul.mb-0
                         li
                             span.fa-li
                                 i.fas.fa-trophy.text-warning
-                            | Google Analytics Certified Developer
+                            | Award For Excellence
                         li
                             span.fa-li
                                 i.fas.fa-trophy.text-warning
-                            | Mobile Web Specialist - Google Certification
+                            | Excellent Website
+                        li
+                            span.fa-li
+                                i.fas.fa-trophy.text-warning
+                            
+                            sup st 
+                            | Won regional football tournaments  
                         li
                             span.fa-li
                                 i.fas.fa-trophy.text-warning
                             | 1
                             sup st 
-                            | Place - University of Colorado Boulder - Emerging Tech Competition 2009
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | 1
-                            sup st 
-                            | Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | 2
-                            sup nd 
-                            | Place - University of Colorado Boulder - Emerging Tech Competition 2008
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | 1
-                            sup st 
-                            | Place - James Buchanan High School - Hackathon 2006
-                        li
-                            span.fa-li
-                                i.fas.fa-trophy.text-warning
-                            | 3
-                            sup rd 
-                            | Place - James Buchanan High School - Hackathon 2005
+                            | SEO and Niche Blogger 
+
 
         // Bootstrap core JS
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')
