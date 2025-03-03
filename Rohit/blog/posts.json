@@ -1,0 +1,12 @@
+[
+    {
+        "title": "5 Best Programming Languages",
+        "summary": "Discover the top 5 programming languages to learn in 2025 and why they are important.",
+        "link": "posts/post1.html"
+    },
+    {
+        "title": "Blog Post Title 2",
+        "summary": "This is a summary of the second blog post. It gives a brief overview of the content.",
+        "link": "posts/post2.html"
+    }
+]

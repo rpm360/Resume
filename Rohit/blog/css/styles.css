@@ -66,6 +66,59 @@ main {
     padding: 20px 0;
 }
 
+.content {
+    display: flex;
+}
+
+.left-column {
+    width: 20%;
+    position: relative;
+    background: url('../images/galaxy.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.right-column {
+    width: 80%;
+}
+
+.floating-icon {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: float 3s ease-in-out infinite, rotate 5s linear infinite;
+}
+
+.floating-icon img {
+    width: 100px; /* Adjust the size as needed */
+    height: auto;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(-50%) translateX(0);
+    }
+    50% {
+        transform: translateY(-50%) translateX(10px);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
 .blog-posts article {
     background: #fff;
     padding: 20px;
