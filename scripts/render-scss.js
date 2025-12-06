@@ -1,42 +1,17 @@
 'use strict';
-const autoprefixer = require('autoprefixer')
 const fs = require('fs');
-const packageJSON = require('../package.json');
 const upath = require('upath');
-const postcss = require('postcss')
-const sass = require('sass');
 const sh = require('shelljs');
 
-const stylesPath = '../src/scss/styles.scss';
-const destPath = upath.resolve(upath.dirname(__filename), '../dist/css/styles.css');
+const sourcePath = upath.resolve(upath.dirname(__filename), '../Rohit/css');
+const destPath = upath.resolve(upath.dirname(__filename), '../dist/css');
 
 module.exports = function renderSCSS() {
-    
-    const results = sass.renderSync({
-        data: entryPoint,
-        includePaths: [
-            upath.resolve(upath.dirname(__filename), '../node_modules')
-        ],
-      });
-
-    const destPathDirname = upath.dirname(destPath);
-    if (!sh.test('-e', destPathDirname)) {
-        sh.mkdir('-p', destPathDirname);
+    // Copy CSS files from Rohit to dist
+    if (!sh.test('-e', destPath)) {
+        sh.mkdir('-p', destPath);
     }
-
-    postcss([ autoprefixer ]).process(results.css, {from: 'styles.css', to: 'styles.css'}).then(result => {
-        result.warnings().forEach(warn => {
-            console.warn(warn.toString())
-        })
-        fs.writeFileSync(destPath, result.css.toString());
-    })
-
+    
+    sh.cp('-R', sourcePath + '/*', destPath);
+    console.log('### INFO: CSS files copied from Rohit/css to dist/css');
 };
-
-const entryPoint = `/*!
-* Start Bootstrap - ${packageJSON.title} v${packageJSON.version} (${packageJSON.homepage})
-* Copyright 2013-${new Date().getFullYear()} ${packageJSON.author}
-* Licensed under ${packageJSON.license} (https://github.com/StartBootstrap/${packageJSON.name}/blob/master/LICENSE)
-*/
-@import "${stylesPath}"
-`
